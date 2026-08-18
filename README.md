@@ -126,8 +126,23 @@ Access tiers allow organizations to balance storage costs against how frequently
 This demonstrated an understanding of storage lifecycle and cost optimization concepts for frequently and infrequently accessed cloud data.
 
 ---
+## 5. Lifecycle Management
 
-## 5. Secure Access with SAS
+A lifecycle management policy was configured for the `retail-data` container to automatically optimize storage costs as data becomes less frequently accessed.
+
+The policy was configured to:
+
+- Move blobs to the **Cool** tier after **30 days**
+- Move blobs to the **Archive** tier after **90 days**
+- Apply the rule specifically to the `retail-data/` blob prefix
+
+This demonstrated how Azure Storage can automatically manage data throughout its lifecycle while reducing the need for manual tier changes.
+
+![Azure Storage lifecycle management policy](Screenshots/04-access-tiers/lifecycle-policy-enabled.png)
+
+---
+
+## 6. Secure Access with SAS
 
 A **Shared Access Signature (SAS)** was generated for the inventory Blob to demonstrate temporary delegated access.
 
@@ -147,7 +162,7 @@ The generated SAS URL was successfully tested in a separate browser session, con
 
 ---
 
-## 6. Storage Security & Data Protection
+## 7. Storage Security & Data Protection
 
 Several Azure Storage security and recovery capabilities were reviewed and configured.
 
@@ -167,7 +182,7 @@ These controls help protect stored data against unauthorized access, accidental 
 
 ---
 
-## 7. Storage Redundancy
+## 8. Storage Redundancy
 
 Azure Storage redundancy options were reviewed to understand how Azure protects data against infrastructure failures.
 
